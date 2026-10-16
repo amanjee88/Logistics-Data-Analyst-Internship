@@ -1,0 +1,8 @@
+check,result,interpretation
+Rows,300,One record per synthetic shipment
+Columns,16,Shipment attributes and derived metrics
+Duplicate shipment IDs,0,Must equal zero
+Missing cells,0,Expected zero for this generated fixture
+Non-positive distance rows,0,Must equal zero
+Negative cost rows,0,Must equal zero
+Timestamp duration mismatch rows,0,Must equal zero

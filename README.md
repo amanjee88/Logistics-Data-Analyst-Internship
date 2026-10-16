@@ -94,3 +94,42 @@ The included fixture intentionally contains 38 synthetic input rows. The current
 - Constante, F., Silva, F., & Pereira, A. (2019). *DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS* (Version 5). Mendeley Data. https://doi.org/10.17632/8gx2fvg2k6.5
 - World Bank. (2023). *World Bank releases Logistics Performance Index 2023*. https://www.worldbank.org/en/news/press-release/2023/04/21/world-bank-releases-logistics-performance-index-2023
 - pandas documentation: https://pandas.pydata.org/docs/
+
+## Week 3 — Advanced Data Analysis and Visualization in Logistics
+
+### Data transparency
+Week 3 uses a deterministic, 300-row **synthetic/hypothetical** shipment dataset created locally with a fixed random seed. The file is designed for EDA practice and is not a download from DataCo or a record of any real carrier. The DataCo and World Bank references provide domain context only. Findings, KPI values, charts and correlations below describe only the generated training sample.
+
+### Week 3 deliverables
+- `reports/Week_3_Advanced_Data_Analysis_and_Visualization.docx` — formatted report with seven embedded charts, interpretation, descriptive statistics, segment comparisons, recommendations, limitations and references.
+- `submission/Week_3_Submission_Description.txt` — detailed portal description exceeding the 200-word minimum.
+- `src/generate_week3_hypothetical_data.py` — reproducible 300-row synthetic dataset generator (seed `20261016`).
+- `src/eda_logistics.py` — timestamp validation, KPI summaries, descriptive statistics, correlation matrix and seven figures.
+- `data/analysis/week3_hypothetical_shipments.csv` — synthetic shipment-level analysis data.
+- `data/analysis/week3_descriptive_statistics.csv`, `week3_region_kpis.csv`, `week3_vehicle_kpis.csv`, `week3_weekly_kpis.csv`, `week3_correlation_matrix.csv`, `week3_data_quality_checks.csv`, `week3_overall_metrics.json` — generated analytical outputs.
+- `reports/figures/week3_*.png` — individual charts embedded in the report.
+- `tests/test_eda_logistics.py` — automated integrity tests for shipment keys, data ranges, timestamp-derived metrics and grouped summaries.
+
+### Run the Week 3 analysis
+Run from the repository root with Python 3.10+:
+
+```bash
+pip install -r requirements.txt
+python src/generate_week3_hypothetical_data.py
+python src/eda_logistics.py
+python tests/test_eda_logistics.py
+```
+
+### Example synthetic findings
+- 300 generated shipments; no missing cells or duplicate IDs by design.
+- Overall synthetic on-time rate: 63.3%; mean delivery time: 10.05 hours; median: 8.07 hours.
+- Mean synthetic transport cost: INR 1,681.51 per shipment; first-attempt success: 90.3%.
+- East has the lowest simulated on-time rate (40.0%); South has the highest (76.4%).
+- Pearson correlation between distance and cost is 0.983, partly because distance is built into the synthetic cost formula. Weight-volume and timestamp-derived correlations are similarly affected by how the data are generated. These results are teaching examples, not empirical claims.
+
+### Analytical cautions
+- Mean cost per shipment cannot be interpreted as vehicle efficiency without accounting for distance, payload and service level; use normalized measures such as cost per kilometre or kilogram where valid.
+- A high correlation is not proof of causality, and some associations are deliberately encoded in the generator.
+- The final weekly time bucket has only four orders because the simulated order window ends on 30 September 2026; its on-time rate is unstable.
+- For operational decisions, replace the synthetic fixture with suitably licensed, documented real data and validate definitions, data quality and segment sample sizes.
+

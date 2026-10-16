@@ -1,0 +1,6 @@
+region,shipment_count,mean_delivery_hours,mean_delay_hours,mean_cost_inr,late_shipment_count,on_time_rate_pct
+Central,53,9.8,-1.97,1753.57,18,66.0
+East,50,13.42,1.18,2046.92,30,40.0
+North,74,9.08,-2.16,1591.1,23,68.9
+South,55,7.96,-3.08,1468.49,13,76.4
+West,68,10.5,-0.9,1627.35,26,61.8

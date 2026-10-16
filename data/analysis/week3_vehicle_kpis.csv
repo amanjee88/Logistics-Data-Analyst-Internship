@@ -1,0 +1,5 @@
+vehicle_type,shipment_count,mean_distance_km,mean_cost_inr,mean_cost_per_km_inr,median_cost_inr,mean_delivery_hours,on_time_rate_pct,first_attempt_success_pct
+Mini-truck,87,119.21,1933.19,16.99,1703.3,12.7,52.87,93.1
+Truck,41,266.66,5307.35,20.71,4940.37,24.28,26.83,65.85
+Two-wheeler,42,22.59,234.64,11.85,213.77,3.42,76.19,92.86
+Van,130,65.1,836.99,14.54,800.01,5.93,77.69,95.38

@@ -1,0 +1,16 @@
+{
+  "rows": 300,
+  "on_time_rate_pct": 63.3,
+  "mean_delivery_time_hours": 10.05,
+  "median_delivery_time_hours": 8.07,
+  "mean_delay_hours": -1.45,
+  "late_shipments": 110,
+  "mean_cost_inr": 1681.51,
+  "mean_cost_per_km_inr": 15.72,
+  "median_cost_inr": 1046.32,
+  "first_attempt_success_pct": 90.3,
+  "correlation_distance_cost": 0.983,
+  "correlation_distance_delivery_time": 0.841,
+  "largest_mean_region_delay": "East",
+  "highest_mean_vehicle_cost": "Truck"
+}
