@@ -1,0 +1,62 @@
+{
+  "rows": 1200,
+  "train_rows": 960,
+  "test_rows": 240,
+  "seed": 20261016,
+  "selected_model": "Linear regression",
+  "selected_test_metrics": {
+    "model": "Linear regression",
+    "MAE_hours": 0.826472007670422,
+    "RMSE_hours": 1.2617465889162964,
+    "R2": 0.9549139248774202
+  },
+  "best_random_forest_params": {
+    "max_depth": 18,
+    "min_samples_leaf": 1,
+    "n_estimators": 220
+  },
+  "random_forest_best_grid_cv_mae_hours": 0.947233612889442,
+  "model_selection_rule": "Lowest five-fold training cross-validation MAE among Linear Regression and default Random Forest; test set not used for model selection.",
+  "top_features": [
+    {
+      "feature": "numeric__distance_km",
+      "importance": 0.9334365027934616
+    },
+    {
+      "feature": "numeric__weather_severity",
+      "importance": 0.017861661665226007
+    },
+    {
+      "feature": "numeric__weight_kg",
+      "importance": 0.008632625957057001
+    },
+    {
+      "feature": "numeric__warehouse_load_pct",
+      "importance": 0.007963162691776519
+    },
+    {
+      "feature": "numeric__route_stops",
+      "importance": 0.007726021510081057
+    }
+  ],
+  "optimization": {
+    "n_shipments": 240,
+    "evaluation_population": "Untouched 20% test split; recommendations use features only and are not evaluated as real operational savings.",
+    "shipments_with_vehicle_change": 82,
+    "vehicle_change_share_pct": 34.166666666666664,
+    "mean_predicted_hours_current": 8.653648188080902,
+    "mean_predicted_hours_recommended": 8.70523322773056,
+    "mean_estimated_cost_current_inr": 4583.3876,
+    "mean_estimated_cost_recommended_inr": 3662.200616666667,
+    "mean_objective_score_improvement_pct": 12.59117842436096,
+    "time_value_inr_per_hour": 85.0,
+    "sla_triage_threshold_hours": 12.0,
+    "note": "All costs, model estimates, assignments, and improvements are synthetic scenario outputs; not measured operational savings."
+  },
+  "caveats": [
+    "All 1200 records are synthetic; no real operations data are included.",
+    "The random train/test split is appropriate only for this simulated cross-sectional exercise; production time-dependent data should use a chronological split.",
+    "Random Forest impurity importance is not causal evidence.",
+    "Vehicle recommendations are a scenario-based capacity and score heuristic, not a route sequence optimizer."
+  ]
+}

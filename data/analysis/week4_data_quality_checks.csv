@@ -1,0 +1,6 @@
+check,value,interpretation
+Rows,1200,Expected 1200 generated records
+Unique shipment IDs,1200,Must equal row count
+Missing cells,0,Required modeled columns must be complete
+Non-positive delivery times,0,Target values must be positive
+Rows above 12-hour triage threshold,186,Illustrative business-rule reference only

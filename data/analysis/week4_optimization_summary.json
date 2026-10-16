@@ -1,0 +1,14 @@
+{
+  "n_shipments": 240,
+  "evaluation_population": "Untouched 20% test split; recommendations use features only and are not evaluated as real operational savings.",
+  "shipments_with_vehicle_change": 82,
+  "vehicle_change_share_pct": 34.166666666666664,
+  "mean_predicted_hours_current": 8.653648188080902,
+  "mean_predicted_hours_recommended": 8.70523322773056,
+  "mean_estimated_cost_current_inr": 4583.3876,
+  "mean_estimated_cost_recommended_inr": 3662.200616666667,
+  "mean_objective_score_improvement_pct": 12.59117842436096,
+  "time_value_inr_per_hour": 85.0,
+  "sla_triage_threshold_hours": 12.0,
+  "note": "All costs, model estimates, assignments, and improvements are synthetic scenario outputs; not measured operational savings."
+}

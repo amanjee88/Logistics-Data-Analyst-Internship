@@ -1,0 +1,4 @@
+model,cv_folds,mean_cv_mae_hours,std_cv_mae_hours
+Median baseline,5,3.4434979166666673,0.2761806774901595
+Linear regression,5,0.8779060847202205,0.019443231199947602
+Random forest (default; 150 trees),5,0.9223086041666668,0.07699369846960825
