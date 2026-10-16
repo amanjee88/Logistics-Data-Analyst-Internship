@@ -1,0 +1,6 @@
+shipment_id,order_date,promised_delivery_at,delivered_at,region,distance_km,shipment_weight_kg,transport_cost_inr,vehicle_type,first_attempt_status,delivered_at_unparseable,region_normalized,review_reason
+SHP0007,2026-10-11 13:00:00,2026-10-13 19:00:00,,South,27.6,,404.42,Two-wheeler,Success,False,South,Conflicting duplicate shipment_id; verify source system before selecting a record
+SHP0016,2026-10-13 11:00:00,,2026-10-16 01:00:00,North,59.8,5.15,61.28,Two-wheeler,Success,False,North,Missing or unparseable promised_delivery_at
+SHP0017,,2026-10-14 12:00:00,2026-10-15 03:00:00,Central,49.9,15.4,329.76,Van,Success,False,Central,Missing or unparseable order_date
+SHP0018,2026-10-09 05:00:00,2026-10-10 11:00:00,2026-10-10 13:00:00,,44.7,14.61,231.65,Mini-truck,Failed,False,,Missing region; source correction required
+SHP0007,2026-10-11 13:00:00,2026-10-13 19:00:00,,South,27.6,,9999.0,Two-wheeler,Success,False,South,Conflicting duplicate shipment_id; verify source system before selecting a record

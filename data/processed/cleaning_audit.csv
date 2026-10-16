@@ -1,0 +1,15 @@
+audit_item,count,interpretation
+Raw synthetic rows loaded,38,Rows in raw practice fixture before any cleaning
+Exact duplicate rows removed,1,Exact row duplicates removed automatically
+Rows routed to manual review,5,Conflicting business keys or required-field issues; not silently guessed
+Clean rows exported,32,Rows retained in cleaned teaching dataset
+Missing-like raw cells detected,9,Counts blank/NA/unknown-style tokens in the raw fixture; not a count of all business errors
+Distance values imputed,2,"Regional median, with overall median fallback"
+Weight values imputed,1,Overall median
+Transport cost values imputed,2,"Vehicle-type median, with overall median fallback"
+Delivery timestamps missing or invalid after checks,3,Retained as missing; no fabricated delivery timestamp
+Invalid delivery chronology flags,1,Delivery timestamp before order timestamp was cleared and flagged
+Unparseable delivered_at values,1,Optional timestamp could not be parsed; treated as missing and flagged
+IQR outliers flagged: distance_km,1,"Flagged for investigation; values retained, not automatically deleted"
+IQR outliers flagged: shipment_weight_kg,1,"Flagged for investigation; values retained, not automatically deleted"
+IQR outliers flagged: transport_cost_inr,2,"Flagged for investigation; values retained, not automatically deleted"
